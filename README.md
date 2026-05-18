@@ -1,111 +1,29 @@
-# EndoAtlas-public
-Public Dataset Description for Multimodal Gastrointestinal Endoscopic Medical Images
-Dataset Overview
+# Public Dataset Description for Multimodal Gastrointestinal Endoscopic Medical Images
 
-This dataset is a multimodal gastrointestinal endoscopic medical image dataset, including three types of images: white-light endoscopy, capsule endoscopy, and endoscopic ultrasound. The dataset covers digestive organs such as the stomach, colorectum, small intestine, and pancreas, and includes neoplastic lesions, inflammatory lesions, polypoid lesions, vascular lesions, and other related contents.This dataset is intended to provide data support for gastrointestinal endoscopic image recognition, lesion detection, lesion segmentation, ultrasound endoscopy station recognition, artificial intelligence-assisted diagnosis, medical image algorithm validation, and teaching research.
+## Dataset Overview
 
-Dataset Composition
+This dataset is a multimodal gastrointestinal endoscopic medical image dataset, including four endoscopic techniques: white-light endoscopy, endoscopic ultrasound, capsule endoscopy, and ERCP. It contains a total of **1,175 images**. The dataset covers digestive organs and related regions, including the stomach, intestine, small intestine, and biliopancreatic system, and includes neoplastic lesions, inflammatory lesions, polypoid lesions, vascular lesions, and other disease categories.The dataset is organized according to different imaging modalities and can be used for disease classification, object detection, lesion segmentation, artificial intelligence-assisted diagnosis, medical image algorithm validation, and teaching research.
 
-The dataset is organized according to endoscopic modality, examination site, lesion category, and task type. The detailed composition is as follows.
+## Dataset Composition
 
-1. White-Light Endoscopy Images
+This dataset consists of four parts. First, the white-light endoscopy subset includes gastric white-light endoscopy images and intestinal white-light endoscopy images. The gastric white-light endoscopy images are classified by disease category, with a total of **75 images**. The intestinal white-light endoscopy images include segmentation and detection tasks, with a total of **400 images**.Second, the endoscopic ultrasound subset is organized for segmentation tasks, with a total of **200 images**. Third, the capsule endoscopy subset is classified by disease category, with a total of **200 images**. Fourth, the ERCP subset is organized for segmentation tasks, with a total of **300 images**.
 
-White-light endoscopy images include gastric images and colorectal images.
+## Dataset Size Summary
 
-1.1 Gastric White-Light Endoscopy Images
-
-The gastric white-light endoscopy subset contains 75 images, including:
-
-| Category | Number of Images |
-|---|---:|
-| Advanced gastric cancer | 5 |
-| High-grade intraepithelial neoplasia | 10 |
-| Low-grade intraepithelial neoplasia | 15 |
-| Atrophic gastritis | 25 |
-| Intestinal metaplasia | 20 |
-
-1.2 Colorectal White-Light Endoscopy Images
-
-The colorectal white-light endoscopy subset is a polyp dataset, including Detection and segmentation tasks. Original images and labled images are provided.
-
-| Task Type | Data Type | Number of Images |
+| Subset | Data Type | Number of Images |
 |---|---|---:|
-| Detection | Original images | 100 |
-| Detection | Labled images | 100 |
-| Segmentation | Original images | 100 |
-| Segmentation | Labled images | 100 |
+| T1-1 | White-light endoscopy - stomach | 75 images |
+| T1-2 | White-light endoscopy - intestine | 400 images |
+| T2 | Endoscopic ultrasound | 200 images |
+| T3 | Capsule endoscopy | 200 images |
+| T4 | ERCP | 300 images |
+| **Total** | — | **1,175 images** |
 
-2. Capsule Endoscopy Images
+## Dataset Features and Applications
 
-The capsule endoscopy subset contains 80 images, all from the small intestine, including protruding lesions, erosions/ulcers, polyps/hyperplasia, and vascular lesions.
+This dataset covers multiple gastrointestinal endoscopic imaging modalities, including white-light endoscopy, endoscopic ultrasound, capsule endoscopy, and ERCP, and can support medical image analysis research across different modalities. The dataset includes images from multiple digestive organs and related regions, such as the stomach, intestine, small intestine, and biliopancreatic system, providing diversity in anatomical sites and image types.The dataset contains both images organized by disease category and image data designed for detection and segmentation tasks. It can be used for training, validation, and performance evaluation of artificial intelligence models for image classification, object detection, and lesion segmentation. In addition, the dataset can also be used for research on medical image annotation standards, gastrointestinal endoscopy teaching, and non-commercial research demonstrations.
 
-| Category | Number of Images |
-|---|---:|
-| Protruding lesion | 20 |
-| Erosion/ulcer | 30 |
-| Polyp/hyperplasia | 10 |
-| Vascular lesion | 20 |
-
-3. Endoscopic Ultrasound Images
-
-The endoscopic ultrasound images are organized according to standard scanning stations, with a total of 40 images. Each station contains 5 images.
-
-| Station | Number of Images |
-|---|---:|
-| Liver window | 5 |
-| Abdominal aorta | 5 |
-| Pancreatic body | 5 |
-| Pancreatic tail | 5 |
-| Confluence triangle | 5 |
-| Pancreatic head through the gastric cavity | 5 |
-| Duodenal bulb station | 5 |
-| Gallbladder station | 5 |
-
-Dataset Size Summary
-
-| Endoscopic Modality | Site/Direction | Number of Images |
-|---|---|---:|
-| White-light endoscopy | Stomach | 75 |
-| White-light endoscopy | Colorectal polyps | 400 |
-| Capsule endoscopy | Small intestine | 80 |
-| Endoscopic ultrasound | Standard scanning stations | 40 |
-| Total | — | 595 |
-
-Dataset Features
-
-1. Coverage of Multimodal Endoscopic Images
-
-The dataset includes white-light endoscopy, capsule endoscopy, and endoscopic ultrasound images, supporting image analysis research across different endoscopic imaging modalities.
-
-2. Coverage of Multiple Digestive Organs
-
-The dataset covers multiple digestive organs, including the stomach, colorectum, small intestine, and pancreas, providing diversity in image types.
-
-3. Support for Detection, Segmentation, and Recognition Tasks
-
-The colorectal polyp subset includes detection and segmentation tasks, with original images and annotated images provided. The endoscopic ultrasound subset is organized according to standard scanning stations and can be used for endoscopic ultrasound station recognition and teaching research.
-
-4. Support for Model Training
-
-The dataset includes multiple lesion categories, such as gastric cancer, intraepithelial neoplasia, atrophic gastritis, intestinal metaplasia, small intestinal protruding lesions, erosions/ulcers, polyps/hyperplasia, and vascular lesions. It can be used for training and validating classification models.
-
-5. Suitability for Medical Artificial Intelligence Research
-
-The dataset can be used for gastrointestinal endoscopic image classification, lesion recognition, lesion segmentation, endoscopic ultrasound station recognition, assisted diagnostic model development, and medical teaching.
-
-Potential Applications
-
-This dataset can be used for, but is not limited to, the following research directions:
-
-- Classification and recognition of gastrointestinal endoscopic images;
-- Assisted diagnosis research for gastric lesions, colorectal polyps, and small intestinal lesions;
-- Detection and lesion segmentation research for colorectal polyp images;
-- Recognition of standard scanning stations in endoscopic ultrasound;
-- Development of multimodal medical image analysis algorithms;
-- Training, validation, and performance evaluation of deep learning models;
-- Gastrointestinal endoscopy teaching and research demonstration.
-
-Data Usage Statement
+## Data Usage Statement
 
 This dataset is intended for non-commercial purposes, including scientific research, teaching, and algorithm validation. Users should comply with relevant requirements regarding medical ethics, data security, and privacy protection when using the dataset. Necessary data organization and de-identification should be completed before release to ensure that no identifiable personal information, such as patient names, identification numbers, or examination dates, is included.
 
